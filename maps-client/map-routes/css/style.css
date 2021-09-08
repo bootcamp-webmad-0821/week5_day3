@@ -1,0 +1,26 @@
+body {
+    font-weight: 200;
+    font-family: sans-serif;
+}
+
+#myMap {
+    height: 100vh;
+    background-color: red;
+}
+
+#routeDetails {
+    position: fixed;
+    bottom: 0px;
+    left: 20px;
+    height: 60vh;
+    width: 35vw;
+    background-color: white;
+    padding: 10px;
+    overflow-x: scroll;
+    box-shadow: 10px -10px 10px rgba(0,0,0,.1 );
+    border: 1px solid;
+}
+
+h1 {
+    font-size: 1.6em;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css'>
+    <style>
+        #myMap {
+            height: 100vh;
+            background-color: red;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <figure id="myMap"></figure>
+
+
+    <script src="./directions.js"></script>
+    <script src="./map-styles.js"></script>
+
+    <script>
+
+        function initMap() {
+
+            const myMap = new google.maps.Map(
+                document.querySelector('#myMap'),
+                {
+                    zoom: 12,
+                    center: directions.ironhackBCN.coords,
+                    styles: mapStyles.yellowParks
+                }
+            )
+
+
+            new google.maps.Marker({
+                map: myMap,
+                position: directions.ironhackBCN.coords,
+                title: directions.ironhackBCN.title
+            })
+        }
+
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=____YOUR_API_KEY_HERE_____&callback=initMap"></script>
+
+</body>
+
+</html>
